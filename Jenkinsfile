@@ -15,8 +15,8 @@ pipeline {
         ]) {
           script {
             echo "Starting upload in S3"
-            sh "ls -lrt ."
-            sh "aws s3 sync . s3://bhabani-1997-bhera"
+            sh "ls -lrt ./build"
+            sh "aws s3 sync ./build/ s3://bhabani-1997-bhera"
             sh "aws s3 ls s3://bhabani-1997-bhera"
             echo "finished Uploading"
           }

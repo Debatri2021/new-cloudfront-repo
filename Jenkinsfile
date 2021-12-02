@@ -19,6 +19,10 @@ pipeline {
             sh "aws s3 sync . s3://bhabani-1997-bhera"
             sh "aws s3 ls s3://bhabani-1997-bhera"
             echo "finished Uploading"
+          }
+        }
+      }
+    }
     
     
     

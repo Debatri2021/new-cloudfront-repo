@@ -15,8 +15,8 @@ pipeline {
         ]) {
           script {
             echo "Starting upload in S3"
-            sh "dir"
-            sh "aws s3 sync ./build/ s3://bhabani-1997-bhera"
+            bat "dir"
+            bat "aws s3 sync ./build/ s3://bhabani-1997-bhera"
             //sh "aws s3 dir s3://bhabani-1997-bhera"
             echo "finished Uploading"
           }

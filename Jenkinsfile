@@ -12,8 +12,8 @@ pipeline {
       steps{
             withAWS(region:'ap-south-1',credentials:'aws_root') {
                // s3Upload(bucket:"bhabani-1997-bhera", file:'firstfolder/index.html');
-              s3Upload(bucket:"bhabani-1997-bhera", file:'index.html', path:'folder1/');
-              s3Upload(bucket:"bhabani-1997-bhera", file:'styles.css', path:'folder1/');
+              s3Upload(bucket:"bhabani-1997-bhera", file:'index.html' );
+              s3Upload(bucket:"bhabani-1997-bhera", file:'styles.css' );
               
             }
       }

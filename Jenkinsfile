@@ -8,6 +8,25 @@ pipeline {
       }
      }
     
+    
+    
+    stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+                withCredentials([[ $class: 'AmazonWebServicesCredentialsBinding',
+                                    credentialsId: "aws_root",
+                                    //accessKeyVariable: 'AWS_ACCESS_KEY_ID',
+                                    //secretKeyVariable: 'AWS_SECRET_ACCESS_KEY'
+                                    ]]) {}
+                                    echo "Removing all files on bucket"
+                    bat 'aws s3 ls s3://bhabani-1997-bhera --recursive --human-readable --summarize'
+            }
+    }
+                    
+    
+    
+    
+    /*
     stage('Upload file to S3') {
       steps{
         withCredentials([
@@ -22,7 +41,7 @@ pipeline {
           }
         }
       }
-    }
+    }  */
     
     
     

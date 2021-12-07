@@ -21,6 +21,7 @@ pipeline {
                                     echo "Removing all files on bucket"
                     bat 'aws s3 ls s3://bhabani-1997-bhera --recursive --human-readable --summarize'
                     bat 'aws s3 sync ./build/ s3://bhabani-1997-bhera'
+                    bat 'aws s3 ls s3://bhabani-1997-bhera'
             }
     }
                     
